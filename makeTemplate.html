@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang=en-us>
+
+
+<head>
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-bundle.css" />
+</head>
+
+<body>
+    hello world
+    <script src="lightGallery-master/dist/lightgallery.umd.js"></script>
+    <script src="lightGallery-master/dist/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+    <script src="lightGallery-master/dist/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="lightGallery-master/dist/plugins/autoplay/lg-autoplay.umd.js"></script>
+
+
+
+    <div id="lightGallery1">
+    </div>
+
+    <!-- lightGallery plugins -->
+    <script type="text/javascript">
+        lightGallery(document.getElementById('lightGallery1'), {
+            plugins: [lgZoom, lgThumbnail, lgAutoplay],
+            licenseKey: '0000-0000-000-0000',
+            speed: 500,
+            alignThumbnails: middle,
+            animateThumb: true,
+            autoplay: true,
+            slideShowAutoplay: true
+
+
+            // ... other settings
+        });
+
+        setTimeout(() => {
+            inlineGallery.openGallery();
+        }, 200);
+
+    </script>
+</body>
+
+</html>
