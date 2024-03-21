@@ -7,7 +7,7 @@
 <body>
     <?php
     $msg = "";
-    $direList = array("king-county-park", "Gordan-Collection", "Josh-Collection", "yockactomac-trek", "They-Working");
+    $direList = array("king-county-park", "Gordon-Collection", "Josh-Collection", "yockactomac-trek", "They-Working");
     foreach ($direList as $dire) {
         $msg .= OneLightbox($dire);
     }
@@ -19,6 +19,8 @@
         $template = str_replace("<title>", "<title>$dire", $template);
         $template = str_replace("<h1>", "<h1>$dire", $template);
         $images = "\n";
+        if (!is_dir($dire))
+            return "No such directory $dire<br>";
         foreach (new DirectoryIterator($dire) as $fileInfo) {
             if ($fileInfo->isDot()) continue;
             if ($fileInfo->isDir()) continue;
