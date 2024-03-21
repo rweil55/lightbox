@@ -7,7 +7,7 @@
 <body>
     <?php
     $msg = "";
-    $direList = array("King-County-Park", "Gordon-Collection", "Josh-Collection", "Yockactomac-Trek", "They-Working");
+    $direList = array("Gordon-Collection", "Holland-Commuters", "Josh-Collection", "King-County-Park", "They-Working", "Yockactomac-Trek");
     foreach ($direList as $dire) {
         $msg .= OneLightbox($dire);
     }
