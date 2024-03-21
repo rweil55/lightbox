@@ -98,6 +98,8 @@
         }
     </style>
     <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-bundle.css" />
+    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lg-autoplay.css" />
+    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lg-transitions.css " />
 </head>
 
 <body>
@@ -132,123 +134,129 @@
             // before navigating to different slides (Optional)
             // You can find caption animation demo on the captions demo page
             slideDelay: 400,
-            plugins: [lgZoom, lgThumbnail],
+            plugins: [lgZoom, lgThumbnail, lgAutoplay],
 
+            slideDelay: 400,
+            plugins: [lgZoom, lgThumbnail, lgAutoplay],
             autoplay: true,
             slideShowAutoplay: true,
+            startAnimationDuration: 300,
+            speed: 500,
+            mode: 'lg-fade',
+
 
             dynamicEl: [
-{
-                src:
-                    'king-county-park/15538720_120x120.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/15538720_120x120.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/15538720_120x120.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_15538720_120x120.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/29423187614_db1cea4789_k.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/29423187614_db1cea4789_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29423187614_db1cea4789_k.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_29423187614_db1cea4789_k.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/29423190044_64aa65473c_k.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/29423190044_64aa65473c_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29423190044_64aa65473c_k.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_29423190044_64aa65473c_k.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/29937246192_8749af9551_k.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/29937246192_8749af9551_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29937246192_8749af9551_k.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_29937246192_8749af9551_k.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/29937250112_2b10706633_k.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/29937250112_2b10706633_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29937250112_2b10706633_k.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_29937250112_2b10706633_k.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/29967435541_4351631d8f_k.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/29967435541_4351631d8f_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29967435541_4351631d8f_k.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_29967435541_4351631d8f_k.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/29967436031_e4e1bddabb_k.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/29967436031_e4e1bddabb_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29967436031_e4e1bddabb_k.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_29967436031_e4e1bddabb_k.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/30016807606_ccadfaf7cf_k.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/30016807606_ccadfaf7cf_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/30016807606_ccadfaf7cf_k.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_30016807606_ccadfaf7cf_k.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/30050760575_8d1b99192f_k.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/30050760575_8d1b99192f_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/30050760575_8d1b99192f_k.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_30050760575_8d1b99192f_k.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/CslsaN_UMAAsyMu.jpeg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/CslsaN_UMAAsyMu.jpeg?auto=format&fit=crop&w=480&q=80 480, king-county-park/CslsaN_UMAAsyMu.jpeg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_CslsaN_UMAAsyMu.jpeg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        {
-                src:
-                    'king-county-park/CslsaOlVMAA56p-.jpg?auto=format&fit=crop&w=1400&q=80',
-                responsive:
-                    'king-county-park/CslsaOlVMAA56p-.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/CslsaOlVMAA56p-.jpg?auto=format&fit=crop&w=800&q=80 800',
-                thumb:
-                    'king-county-park/thumbs/thumbs_CslsaOlVMAA56p-.jpg?auto=format&fit=crop&w=240&q=80',
-                subHtml: 
-                    `<div class="lightGallery-captions"></div>`
-            },
-        
+                {
+                    src:
+                        'king-county-park/15538720_120x120.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/15538720_120x120.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/15538720_120x120.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_15538720_120x120.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/29423187614_db1cea4789_k.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/29423187614_db1cea4789_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29423187614_db1cea4789_k.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_29423187614_db1cea4789_k.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/29423190044_64aa65473c_k.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/29423190044_64aa65473c_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29423190044_64aa65473c_k.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_29423190044_64aa65473c_k.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/29937246192_8749af9551_k.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/29937246192_8749af9551_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29937246192_8749af9551_k.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_29937246192_8749af9551_k.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/29937250112_2b10706633_k.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/29937250112_2b10706633_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29937250112_2b10706633_k.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_29937250112_2b10706633_k.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/29967435541_4351631d8f_k.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/29967435541_4351631d8f_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29967435541_4351631d8f_k.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_29967435541_4351631d8f_k.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/29967436031_e4e1bddabb_k.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/29967436031_e4e1bddabb_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/29967436031_e4e1bddabb_k.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_29967436031_e4e1bddabb_k.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/30016807606_ccadfaf7cf_k.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/30016807606_ccadfaf7cf_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/30016807606_ccadfaf7cf_k.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_30016807606_ccadfaf7cf_k.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/30050760575_8d1b99192f_k.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/30050760575_8d1b99192f_k.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/30050760575_8d1b99192f_k.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_30050760575_8d1b99192f_k.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/CslsaN_UMAAsyMu.jpeg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/CslsaN_UMAAsyMu.jpeg?auto=format&fit=crop&w=480&q=80 480, king-county-park/CslsaN_UMAAsyMu.jpeg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_CslsaN_UMAAsyMu.jpeg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+                {
+                    src:
+                        'king-county-park/CslsaOlVMAA56p-.jpg?auto=format&fit=crop&w=1400&q=80',
+                    responsive:
+                        'king-county-park/CslsaOlVMAA56p-.jpg?auto=format&fit=crop&w=480&q=80 480, king-county-park/CslsaOlVMAA56p-.jpg?auto=format&fit=crop&w=800&q=80 800',
+                    thumb:
+                        'king-county-park/thumbs/thumbs_CslsaOlVMAA56p-.jpg?auto=format&fit=crop&w=240&q=80',
+                    subHtml:
+                        `<div class="lightGallery-captions"></div>`
+                },
+
             ],
 
             // Completely optional
@@ -261,6 +269,8 @@
         setTimeout(() => {
             inlineGallery.openGallery();
         }, 200);
+
+        //   setTimeout((function () { n.changeToNext(), o.disableSlideshowLoop && s.current + 1 === o.sources.length ? a() : c() }), o.slideshowTime);
 
     </script>
 </body>

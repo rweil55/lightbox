@@ -98,6 +98,8 @@
         }
     </style>
     <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-bundle.css" />
+    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lg-autoplay.css" />
+    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lg-transitions.css " />
 </head>
 
 <body>
@@ -132,10 +134,16 @@
             // before navigating to different slides (Optional)
             // You can find caption animation demo on the captions demo page
             slideDelay: 400,
-            plugins: [lgZoom, lgThumbnail],
+            plugins: [lgZoom, lgThumbnail, lgAutoplay],
 
+            slideDelay: 400,
+            plugins: [lgZoom, lgThumbnail, lgAutoplay],
             autoplay: true,
             slideShowAutoplay: true,
+            startAnimationDuration: 300,
+            speed: 500,
+            mode: 'lg-fade',
+
 
             dynamicEl: [
             ],
@@ -150,6 +158,8 @@
         setTimeout(() => {
             inlineGallery.openGallery();
         }, 200);
+
+        setTimeout((function () { n.changeToNext(), o.disableSlideshowLoop && s.current + 1 === o.sources.length ? a() : c() }), o.slideshowTime);
 
     </script>
 </body>
