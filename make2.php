@@ -7,8 +7,10 @@
 <body>
     <?php
     $msg = "";
-    $dire = "king-county-park";
-    $msg .= OneLightbox($dire);
+    $direList = array("king-county-park", "Gordan-Collection", "Josh-Collection", "yockactomac-trek", "They-Working");
+    foreach ($direList as $dire) {
+        $msg .= OneLightbox($dire);
+    }
     print $msg . date("Y-m-d H:i:s");
 
     function OneLightbox($dire, $photographer = "", $photoDate = "")
@@ -45,9 +47,6 @@
         file_put_contents("$dire.html", $template);
         return "Created <a href='//127.0.0.1/lightbox/$dire.html' target='make'> $dire.html</a><br>";
     }
-
-
-
     ?>
 
 </body>
