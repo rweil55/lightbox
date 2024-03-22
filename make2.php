@@ -1,17 +1,21 @@
 <html>
 
 <head>
-    <title>My First Web Page</title>
+    <title>Build slide decks</title>
 </head>
 
 <body>
+    <!-- <a href="make2.php" target="make">make2.php</a> -->
+    See Demo at <a href="https://www.lightgalleryjs.com/demos/carousel-gallery/" target="demo">Carousel Gallery</a><br>
+    See Documentation at <a href="https://www.lightgalleryjs.com/docs/getting-started/" target="docs">lightGallery geting started</a> <br><br>
     <?php
     $msg = "";
     $direList = array("Gordon-Collection", "Holland-Commuters", "Josh-Collection", "King-County-Park", "They-Working", "Yockatomac-Trek");
     foreach ($direList as $dire) {
         $msg .= OneLightbox($dire);
     }
-    print $msg . date("Y-m-d H:i:s");
+    print "$msg<br>Files created on " . date("Y-m-d H:i:s");
+    exit(0);
 
     function OneLightbox($dire, $photographer = "", $photoDate = "")
     {
