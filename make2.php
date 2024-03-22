@@ -18,7 +18,8 @@
         $template =  file_get_contents("make2Template.html");
         $template = str_replace("<title>", "<title>$dire", $template);
         $template = str_replace("<h1>", "<h1>$dire", $template);
-        $ima-21n(new DirectoryIterator($dire) as $fileInfo) {
+        $images = "";
+        foreach (new DirectoryIterator($dire) as $fileInfo) {
             if ($fileInfo->isDot()) continue;
             if ($fileInfo->isDir()) continue;
             $fileName = $fileInfo->getFilename();
