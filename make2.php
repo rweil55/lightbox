@@ -30,11 +30,11 @@
 
             $images .= "{
                 src:
-                    '/$dire/$fileName?auto=format&fit=crop&w=1400&q=80',
+                    '$dire/$fileName?auto=format&fit=crop&w=1400&q=80',
                 responsive:
-                    '/$dire/$fileName?auto=format&fit=crop&w=480&q=80 480, $dire/$fileName?auto=format&fit=crop&w=800&q=80 800',
+                    '$dire/$fileName?auto=format&fit=crop&w=480&q=80 480, $dire/$fileName?auto=format&fit=crop&w=800&q=80 800',
                 thumb:
-                    '/$dire/thumbs/thumbs_$fileName?auto=format&fit=crop&w=240&q=80',
+                    '$dire/thumbs/thumbs_$fileName?auto=format&fit=crop&w=240&q=80',
                 subHtml: 
                     `<div class=\"lightGallery-captions\">";
             if ($photographer)
