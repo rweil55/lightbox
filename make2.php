@@ -25,6 +25,11 @@
             if ($fileInfo->isDot()) continue;
             if ($fileInfo->isDir()) continue;
             $fileName = $fileInfo->getFilename();
+            $thumbFilename = "thumbs/thumbs_$fileName";
+            if (!file_exists("$dire/$thumbFilename")) {
+                $cmd = "convert $dire/$fileName -resize 240x240 $dire/$thumbFilename";
+                exec($cmd);
+            }
 
             $images .= "{
                 src:
