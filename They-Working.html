@@ -1,0 +1,1117 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>They-Working </title>
+    <style>
+        body {
+            padding: 40px;
+            background-image: linear-gradient(#e8f0ff 0%, white 52.08%);
+            color: #0e3481;
+            min-height: 100vh;
+        }
+
+        .header .lead {
+            max-width: 620px;
+        }
+
+        .inline-gallery-container {
+            width: 700px;
+            height: 500px;
+            position: relative;
+        }
+
+        /* For caption animation(Optional)*/
+        .lightGallery-captions {
+            h4 {
+                transform: translate3d(60px, 0, 0px);
+            }
+
+            p {
+                transform: translate3d(-60px, 0, 0px);
+            }
+
+            h4,
+            p {
+                opacity: 0;
+            }
+        }
+
+        .lg-current {
+            .lightGallery-captions {
+
+                h4,
+                p {
+                    transform: translate3d(0, 0, 0px);
+                }
+
+                h4,
+                p {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .lg-slide-progress {
+            .lightGallery-captions {
+                h4 {
+                    transform: translate3d(-60px, 0, 0px);
+                }
+
+                p {
+                    transform: translate3d(60px, 0, 0px);
+                }
+
+                h4,
+                p {
+                    opacity: 0;
+                }
+            }
+        }
+
+        .lightGallery-captions {
+
+            h4,
+            p {
+                transition: transform 0.4s ease-in-out, opacity 0.4s ease-in;
+            }
+        }
+
+        .lg-current {
+            .lightGallery-captions {
+
+                h4,
+                p {
+                    transition-delay: 500ms;
+                }
+            }
+
+            &.lg-slide-progress {
+                .lightGallery-captions {
+
+                    h4,
+                    p {
+                        transition-delay: 0ms;
+                    }
+                }
+            }
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lightgallery-bundle.css" />
+    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lg-autoplay.css" />
+    <link type="text/css" rel="stylesheet" href="lightGallery-master/dist/css/lg-transitions.css " />
+</head>
+
+<body>
+    <h1>They-Working</h1>
+    <script src="lightGallery-master/dist/lightgallery.umd.js"></script>
+    <script src="lightGallery-master/dist/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+    <script src="lightGallery-master/dist/plugins/zoom/lg-zoom.umd.js"></script>
+    <script src="lightGallery-master/dist/plugins/autoplay/lg-autoplay.umd.js"></script>
+
+    <div class="d-flex justify-content-center">
+        <div id="inline-gallery-container" class="inline-gallery-container"></div>
+    </div>
+
+    <script>
+
+        const $lgContainer = document.getElementById("inline-gallery-container");
+
+        const inlineGallery = lightGallery($lgContainer, {
+            container: $lgContainer,
+            dynamic: true,
+            // Turn off hash plugin in case if you are using it
+            // as we don't want to change the url on slide change
+            hash: false,
+            // Do not allow users to close the gallery
+            closable: false,
+            // Add maximize icon to enlarge the gallery
+            showMaximizeIcon: true,
+            // Append caption inside the slide item
+            // to apply some animation for the captions (Optional)
+            appendSubHtmlTo: ".lg-item",
+            // Delay slide transition to complete captions animations
+            // before navigating to different slides (Optional)
+            // You can find caption animation demo on the captions demo page
+            slideDelay: 400,
+            plugins: [lgZoom, lgThumbnail, lgAutoplay],
+
+            slideDelay: 400,
+            plugins: [lgZoom, lgThumbnail, lgAutoplay],
+            autoplay: true,
+            slideShowAutoplay: true,
+            startAnimationDuration: 300,
+            speed: 500,
+            mode: 'lg-fade',
+
+
+            dynamicEl: [{
+                src:
+                    'They-Working/0911-y1-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/0911-y1-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/0911-y1-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_0911-y1-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/100_5063-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/100_5063-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/100_5063-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_100_5063-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/8-16-10-002-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/8-16-10-002-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/8-16-10-002-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_8-16-10-002-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/9-10-11-part-2-012-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/9-10-11-part-2-012-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/9-10-11-part-2-012-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_9-10-11-part-2-012-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/9-10-11-part-2-016-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/9-10-11-part-2-016-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/9-10-11-part-2-016-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_9-10-11-part-2-016-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/9-10-11-part-2-019-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/9-10-11-part-2-019-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/9-10-11-part-2-019-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_9-10-11-part-2-019-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/after-fence1-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/after-fence1-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/after-fence1-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_after-fence1-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/AVT-picnic-ack-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/AVT-picnic-ack-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/AVT-picnic-ack-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_AVT-picnic-ack-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/AVT-picnic-done-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/AVT-picnic-done-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/AVT-picnic-done-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_AVT-picnic-done-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/AVT-picnic-scout-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/AVT-picnic-scout-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/AVT-picnic-scout-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_AVT-picnic-scout-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/AVT-picnic-work-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/AVT-picnic-work-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/AVT-picnic-work-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_AVT-picnic-work-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/before-fence1-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/before-fence1-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/before-fence1-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_before-fence1-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/before-fence2-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/before-fence2-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/before-fence2-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_before-fence2-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/bench2010_1112001_opt-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/bench2010_1112001_opt-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/bench2010_1112001_opt-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_bench2010_1112001_opt-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/bench2010_1112005_opt-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/bench2010_1112005_opt-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/bench2010_1112005_opt-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_bench2010_1112005_opt-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/bench2010_1112012_opt-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/bench2010_1112012_opt-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/bench2010_1112012_opt-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_bench2010_1112012_opt-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/bike-route-sign-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/bike-route-sign-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/bike-route-sign-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_bike-route-sign-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/bollman-4441-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/bollman-4441-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/bollman-4441-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_bollman-4441-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/Boy-Scouts-184-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/Boy-Scouts-184-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/Boy-Scouts-184-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_Boy-Scouts-184-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/brady-surf-3012-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/brady-surf-3012-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/brady-surf-3012-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_brady-surf-3012-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/butler-enclosure-crew-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/butler-enclosure-crew-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/butler-enclosure-crew-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_butler-enclosure-crew-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/butler-enclosure-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/butler-enclosure-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/butler-enclosure-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_butler-enclosure-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/C-021-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/C-021-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/C-021-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_C-021-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/C-025-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/C-025-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/C-025-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_C-025-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/Cement3-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/Cement3-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/Cement3-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_Cement3-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/coder-IMG_5089a-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/coder-IMG_5089a-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/coder-IMG_5089a-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_coder-IMG_5089a-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/contraflow-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/contraflow-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/contraflow-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_contraflow-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/crew-1-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/crew-1-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/crew-1-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_crew-1-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/crew-2-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/crew-2-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/crew-2-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_crew-2-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/daffodil-180331-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/daffodil-180331-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/daffodil-180331-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_daffodil-180331-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/direction-sign-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/direction-sign-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/direction-sign-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_direction-sign-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/done-4-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/done-4-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/done-4-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_done-4-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/drawing-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/drawing-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/drawing-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_drawing-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/fig5-deck-boards-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/fig5-deck-boards-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/fig5-deck-boards-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_fig5-deck-boards-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/fig6-work-crew-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/fig6-work-crew-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/fig6-work-crew-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_fig6-work-crew-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/fig8-last-board-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/fig8-last-board-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/fig8-last-board-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_fig8-last-board-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/finished-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/finished-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/finished-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_finished-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/forf-trim-012-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/forf-trim-012-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/forf-trim-012-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_forf-trim-012-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/gate-0747-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/gate-0747-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/gate-0747-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_gate-0747-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/getting-started-a-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/getting-started-a-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/getting-started-a-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_getting-started-a-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/going-up-4-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/going-up-4-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/going-up-4-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_going-up-4-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/going-up-7-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/going-up-7-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/going-up-7-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_going-up-7-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/groomer-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/groomer-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/groomer-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_groomer-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/history-sign-0756-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/history-sign-0756-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/history-sign-0756-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_history-sign-0756-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/horton-camp-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/horton-camp-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/horton-camp-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_horton-camp-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/Installing-Garden-Signs-005-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/Installing-Garden-Signs-005-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/Installing-Garden-Signs-005-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_Installing-Garden-Signs-005-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/Installing-Garden-Signs-008-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/Installing-Garden-Signs-008-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/Installing-Garden-Signs-008-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_Installing-Garden-Signs-008-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/Kara-with-Finished-Gold-Award-Project-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/Kara-with-Finished-Gold-Award-Project-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/Kara-with-Finished-Gold-Award-Project-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_Kara-with-Finished-Gold-Award-Project-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/krunick-no3-6200-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/krunick-no3-6200-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/krunick-no3-6200-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_krunick-no3-6200-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/lift-ready-0530AH-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/lift-ready-0530AH-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/lift-ready-0530AH-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_lift-ready-0530AH-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/Limestone-surfacing-by-MTC-volunteers-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/Limestone-surfacing-by-MTC-volunteers-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/Limestone-surfacing-by-MTC-volunteers-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_Limestone-surfacing-by-MTC-volunteers-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/loop-sign-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/loop-sign-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/loop-sign-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_loop-sign-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/milepost-2522-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/milepost-2522-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/milepost-2522-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_milepost-2522-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/milepost-2525-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/milepost-2525-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/milepost-2525-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_milepost-2525-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/Millings-applied-to-trail-by-MTC-volunteers-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/Millings-applied-to-trail-by-MTC-volunteers-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/Millings-applied-to-trail-by-MTC-volunteers-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_Millings-applied-to-trail-by-MTC-volunteers-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/mon-camp-dev-5334-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/mon-camp-dev-5334-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/mon-camp-dev-5334-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_mon-camp-dev-5334-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/muck-br-2015-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/muck-br-2015-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/muck-br-2015-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_muck-br-2015-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/muck-may09-6176-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/muck-may09-6176-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/muck-may09-6176-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_muck-may09-6176-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/NADC_8134w-t.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/NADC_8134w-t.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/NADC_8134w-t.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_NADC_8134w-t.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/new-tvf-trail-4710-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/new-tvf-trail-4710-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/new-tvf-trail-4710-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_new-tvf-trail-4710-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/pan-surf-5534-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/pan-surf-5534-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/pan-surf-5534-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_pan-surf-5534-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/pine-IMG_5062-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/pine-IMG_5062-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/pine-IMG_5062-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_pine-IMG_5062-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/Piney-Fork-Bridge-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/Piney-Fork-Bridge-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/Piney-Fork-Bridge-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_Piney-Fork-Bridge-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/plan-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/plan-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/plan-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_plan-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/privacy-fence-5332-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/privacy-fence-5332-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/privacy-fence-5332-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_privacy-fence-5332-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/radio-hilift-0530AJ-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/radio-hilift-0530AJ-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/radio-hilift-0530AJ-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_radio-hilift-0530AJ-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/radio-ready-0530AD-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/radio-ready-0530AD-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/radio-ready-0530AD-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_radio-ready-0530AD-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/RRWA-tractor-blade1-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/RRWA-tractor-blade1-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/RRWA-tractor-blade1-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_RRWA-tractor-blade1-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/sign-ericv-2778-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/sign-ericv-2778-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/sign-ericv-2778-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_sign-ericv-2778-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/sign-ericv-2781-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/sign-ericv-2781-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/sign-ericv-2781-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_sign-ericv-2781-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/snow-shovel-002-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/snow-shovel-002-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/snow-shovel-002-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_snow-shovel-002-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/snowshovel-548-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/snowshovel-548-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/snowshovel-548-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_snowshovel-548-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/stav-plants-3298-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/stav-plants-3298-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/stav-plants-3298-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_stav-plants-3298-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/stav-plants-3304-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/stav-plants-3304-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/stav-plants-3304-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_stav-plants-3304-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/stav-plants-3322-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/stav-plants-3322-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/stav-plants-3322-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_stav-plants-3322-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/svtc-containermower-t.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/svtc-containermower-t.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/svtc-containermower-t.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_svtc-containermower-t.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/svtc-mower-t.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/svtc-mower-t.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/svtc-mower-t.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_svtc-mower-t.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/svtc-mower-trailer-container-t.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/svtc-mower-trailer-container-t.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/svtc-mower-trailer-container-t.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_svtc-mower-trailer-container-t.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/svtc-steel-container-t.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/svtc-steel-container-t.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/svtc-steel-container-t.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_svtc-steel-container-t.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/trail-work-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/trail-work-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/trail-work-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_trail-work-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/trimmer-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/trimmer-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/trimmer-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_trimmer-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/venice-open-0290-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/venice-open-0290-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/venice-open-0290-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_venice-open-0290-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/venice-xing-0292-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/venice-xing-0292-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/venice-xing-0292-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_venice-xing-0292-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/venice-xing-2010-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/venice-xing-2010-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/venice-xing-2010-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_venice-xing-2010-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/venice-xing-2012-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/venice-xing-2012-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/venice-xing-2012-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_venice-xing-2012-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/wall-1-LR-wt.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/wall-1-LR-wt.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/wall-1-LR-wt.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_wall-1-LR-wt.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/wall-2-LCR-wt.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/wall-2-LCR-wt.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/wall-2-LCR-wt.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_wall-2-LCR-wt.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/wytc-2012-08-07-001-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/wytc-2012-08-07-001-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/wytc-2012-08-07-001-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_wytc-2012-08-07-001-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/wytc-2012-10-12-kiosks-005-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/wytc-2012-10-12-kiosks-005-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/wytc-2012-10-12-kiosks-005-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_wytc-2012-10-12-kiosks-005-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/wytc-grader2-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/wytc-grader2-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/wytc-grader2-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_wytc-grader2-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/wytc-vol-signs-001_opt-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/wytc-vol-signs-001_opt-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/wytc-vol-signs-001_opt-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_wytc-vol-signs-001_opt-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/YRTN-Cement1-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/YRTN-Cement1-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/YRTN-Cement1-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_YRTN-Cement1-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/YRTN-Cement2-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/YRTN-Cement2-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/YRTN-Cement2-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_YRTN-Cement2-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/yrtn-tractor-t2-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/yrtn-tractor-t2-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/yrtn-tractor-t2-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_yrtn-tractor-t2-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        {
+                src:
+                    'They-Working/yrtn-tractor-t4-st.jpg?auto=format&fit=crop&w=1400&q=80',
+                responsive:
+                    'They-Working/yrtn-tractor-t4-st.jpg?auto=format&fit=crop&w=480&q=80 480, They-Working/yrtn-tractor-t4-st.jpg?auto=format&fit=crop&w=800&q=80 800',
+                thumb:
+                    'They-Working/thumbs/thumbs_yrtn-tractor-t4-st.jpg?auto=format&fit=crop&w=240&q=80',
+                subHtml: 
+                    `<div class="lightGallery-captions"></div>`
+            },
+        
+            ],
+
+            // Completely optional
+            // Adding as the codepen preview is usually smaller
+            thumbWidth: 60,
+            thumbHeight: "40px",
+            thumbMargin: 4
+        });
+
+        setTimeout(() => {
+            inlineGallery.openGallery();
+        }, 200);
+
+        setTimeout((function () { n.changeToNext(), o.disableSlideshowLoop && s.current + 1 === o.sources.length ? a() : c() }), o.slideshowTime);
+
+    </script>
+</body>
+<html>
+```
