@@ -10,7 +10,7 @@
     See Documentation at <a href="https://www.lightgalleryjs.com/docs/getting-started/" target="docs">lightGallery geting started</a> <br><br>
     <?php
     $msg = "";
-    $direList = array("Gordon-Collection", "Holland-Commuters", "Josh-Collection", "King-County-Park", "They-Working", "Yockatomac-Trek");
+    $direList = array("walks-Collection");
     foreach ($direList as $dire) {
         $msg .= OneLightbox($dire);
     }
